@@ -1,0 +1,7 @@
+---
+# defaults file for roles/apt
+periodic_updates: true
+force_ipv4: true
+unattended_upgrades: true
+unattended_upgrades_email: 'root@localhost'
+

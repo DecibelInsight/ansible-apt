@@ -1,0 +1,7 @@
+// {{ ansible_managed }}
+{% if force_ipv4 %}
+Acquire::ForceIPv4 "true";
+{% else %}
+// Acquire::ForceIPv4 "true";
+{% endif %}
+

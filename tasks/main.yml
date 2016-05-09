@@ -1,0 +1,20 @@
+---
+# tasks file for roles/apt
+
+  - name: deploy config
+    template:
+      src: '{{ item }}'
+      dest: '{{ "/" + item }}'
+    with_items:
+      - etc/apt/apt.conf.d/10periodic
+      - etc/apt/apt.conf.d/99force-ipv4
+      - etc/apt/apt.conf.d/50unattended-upgrades
+
+  - name: deploy source.list
+    template:
+      src: etc/apt/sources.list
+      dest: /etc/apt/sources.list
+      backup: true
+    notify:
+      - cleanup partials
+      - apt-get update

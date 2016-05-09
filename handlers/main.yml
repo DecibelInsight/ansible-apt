@@ -1,0 +1,11 @@
+---
+# handlers file for roles/apt
+
+  - name: cleanup partials
+    file:
+      path: /var/lib/apt/lists/partial/
+      state: absent
+
+  - name: apt-get update
+    apt:
+      update_cache: true
