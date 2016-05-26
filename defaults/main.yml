@@ -13,7 +13,7 @@ apt_region: 'default'
 # some alternatives from http://askubuntu.com/a/125252/357737 are:
 deb_mirror_list:
   'default': 'http://gb.archive.ubuntu.com/ubuntu'
-  'us-west': 'http://us-east-1.clouds.archive.ubuntu.com/ubuntu/'
+  'us-east': 'http://us-east-1.clouds.archive.ubuntu.com/ubuntu/'
   'us-west': 'http://us-west-1.clouds.archive.ubuntu.com/ubuntu/'
   'sa-east': 'http://sa-east-1.clouds.archive.ubuntu.com/ubuntu/'
   'eu-central': 'http://eu-central-1.clouds.archive.ubuntu.com/ubuntu/'
