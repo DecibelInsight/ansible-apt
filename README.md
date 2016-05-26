@@ -15,13 +15,13 @@ Variables that are available for configuration are:
   - `apt_region`: if this is set, then an AWS server will be used as the main mirror for
   apt updates. This can be one of
 
-      - `default` (default value if non is provided)
-      - `us-west`
-      - `sa-east`
-      - `eu-centra`
-      - `eu-west`
-      - `ap-southeast`
-      - `ap-northeast`
+   - `default` (default value if non is provided)
+   - `us-west`
+   - `sa-east`
+   - `eu-centra`
+   - `eu-west`
+   - `ap-southeast`
+   - `ap-northeast`
 
 Example Playbook
 ----------------
