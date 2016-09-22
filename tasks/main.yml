@@ -9,6 +9,8 @@
       - etc/apt/apt.conf.d/10periodic
       - etc/apt/apt.conf.d/99force-ipv4
       - etc/apt/apt.conf.d/50unattended-upgrades
+    tags:
+      - packer
 
   - name: deploy source.list
     template:
@@ -18,3 +20,5 @@
     notify:
       - cleanup partials
       - apt-get update
+    tags:
+      - packer
