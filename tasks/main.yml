@@ -28,11 +28,6 @@
       src: etc/apt/preferences
       dest: /etc
 
-  - name: deploy stuff
-    template:
-      src: test
-      dest: dest
-
   - name: deploy template for disabled packages
     template:
       src: etc/apt/preferences
