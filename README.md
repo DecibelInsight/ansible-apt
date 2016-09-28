@@ -23,6 +23,8 @@ Variables that are available for configuration are:
    - `ap-southeast`
    - `ap-northeast`
 
+  - `apt_disable_list`: A list of packages to be blacklisted for apt.
+
 Example Playbook
 ----------------
 
