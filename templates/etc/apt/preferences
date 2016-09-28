@@ -1,0 +1,8 @@
+# {{ ansible_managed }}
+
+{% for package in apt_disable_list %}
+Package: {{ package }}
+Pin: origin ""
+Pin-Priority: -1
+
+{% endfor %}

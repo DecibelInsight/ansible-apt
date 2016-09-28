@@ -22,3 +22,18 @@
       - apt-get update
     tags:
       - packer
+
+  - name: Disable packages from apt
+    template:
+      src: etc/apt/preferences
+      dest: /etc
+
+  - name: deploy stuff
+    template:
+      src: test
+      dest: dest
+
+  - name: deploy template for disabled packages
+    template:
+      src: etc/apt/preferences
+      dest: /etc/apt/preferences
