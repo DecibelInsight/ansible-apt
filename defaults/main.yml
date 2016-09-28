@@ -9,6 +9,7 @@ unattended_upgrades_email: 'root@localhost'
 mirrors: false
 apt_region: 'default'
 
+apt_disable_list: []
 
 # some alternatives from http://askubuntu.com/a/125252/357737 are:
 deb_mirror_list:
