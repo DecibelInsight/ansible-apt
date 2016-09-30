@@ -32,3 +32,5 @@
     template:
       src: etc/apt/preferences
       dest: /etc/apt/preferences
+    tags:
+      - disabled
