@@ -89,7 +89,8 @@ galaxy_info:
   #  - quantal
   #  - raring
   #  - saucy
-    - trusty
+  #  - trusty
+     - xenial
   #  - utopic
   #  - vivid
   #- name: SLES

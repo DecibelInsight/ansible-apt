@@ -1,72 +1,68 @@
 # 
 # {{ ansible_managed }}
 {% if mirrors %}
-deb mirror://mirrors.ubuntu.com/mirrors.txt trusty main restricted universe multiverse
-deb mirror://mirrors.ubuntu.com/mirrors.txt trusty-updates main restricted universe multiverse
-deb mirror://mirrors.ubuntu.com/mirrors.txt trusty-backports main restricted universe multiverse
-deb mirror://mirrors.ubuntu.com/mirrors.txt trusty-security main restricted universe multiverse
+deb mirror://mirrors.ubuntu.com/mirrors.txt xenial main restricted universe multiverse
+deb mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates main restricted universe multiverse
+deb mirror://mirrors.ubuntu.com/mirrors.txt xenial-backports main restricted universe multiverse
+deb mirror://mirrors.ubuntu.com/mirrors.txt xenial-security main restricted universe multiverse
 {% endif %}
 
 
 {% set deb_url= deb_mirror_list[apt_region] %}
-# deb cdrom:[Ubuntu-Server 14.04.3 LTS _Trusty Tahr_ - Beta amd64 (20150805)]/ trusty main restricted
-
-#deb cdrom:[Ubuntu-Server 14.04.3 LTS _Trusty Tahr_ - Beta amd64 (20150805)]/ trusty main restricted
+## Note, this file is written by cloud-init on first boot of an instance
+## modifications made here will not survive a re-bundle.
+## if you wish to make changes you can:
+## a.) add 'apt_preserve_sources_list: true' to /etc/cloud/cloud.cfg
+##     or do the same in user-data
+## b.) add sources in /etc/apt/sources.list.d
+## c.) make changes to template file /etc/cloud/templates/sources.list.tmpl
 
 # See http://help.ubuntu.com/community/UpgradeNotes for how to upgrade to
 # newer versions of the distribution.
-deb {{ deb_url }} trusty main restricted
-deb-src {{ deb_url }} trusty main restricted
+deb {{ deb_url }} xenial main restricted
+deb-src {{ deb_url }} xenial main restricted
 
 ## Major bug fix updates produced after the final release of the
 ## distribution.
-deb {{ deb_url }} trusty-updates main restricted
-deb-src {{ deb_url }} trusty-updates main restricted
+deb {{ deb_url }} xenial-updates main restricted
+deb-src {{ deb_url }} xenial-updates main restricted
 
 ## N.B. software from this repository is ENTIRELY UNSUPPORTED by the Ubuntu
 ## team. Also, please note that software in universe WILL NOT receive any
 ## review or updates from the Ubuntu security team.
-deb {{ deb_url }} trusty universe
-deb-src {{ deb_url }} trusty universe
-deb {{ deb_url }} trusty-updates universe
-deb-src {{ deb_url }} trusty-updates universe
+deb {{ deb_url }} xenial universe
+deb-src {{ deb_url }} xenial universe
+deb {{ deb_url }} xenial-updates universe
+deb-src {{ deb_url }} xenial-updates universe
 
 ## N.B. software from this repository is ENTIRELY UNSUPPORTED by the Ubuntu 
 ## team, and may not be under a free licence. Please satisfy yourself as to 
 ## your rights to use the software. Also, please note that software in 
 ## multiverse WILL NOT receive any review or updates from the Ubuntu
 ## security team.
-deb {{ deb_url }} trusty multiverse
-deb-src {{ deb_url }} trusty multiverse
-deb {{ deb_url }} trusty-updates multiverse
-deb-src {{ deb_url }} trusty-updates multiverse
+deb {{ deb_url }} xenial multiverse
+deb-src {{ deb_url }} xenial multiverse
+deb {{ deb_url }} xenial-updates multiverse
+deb-src {{ deb_url }} xenial-updates multiverse
 
 ## N.B. software from this repository may not have been tested as
 ## extensively as that contained in the main release, although it includes
 ## newer versions of some applications which may provide useful features.
 ## Also, please note that software in backports WILL NOT receive any review
 ## or updates from the Ubuntu security team.
-deb {{ deb_url }} trusty-backports main restricted universe multiverse
-deb-src {{ deb_url }} trusty-backports main restricted universe multiverse
+deb {{ deb_url }} xenial-backports main restricted universe multiverse
+deb-src {{ deb_url }} xenial-backports main restricted universe multiverse
 
-deb {{ deb_url }} trusty-security main restricted
-deb-src {{ deb_url }} trusty-security main restricted
-deb {{ deb_url }} trusty-security universe
-deb-src {{ deb_url }} trusty-security universe
-deb {{ deb_url }} trusty-security multiverse
-deb-src {{ deb_url }} trusty-security multiverse
+deb {{ deb_url }} xenial-security main restricted
+deb-src {{ deb_url }} xenial-security main restricted
+deb {{ deb_url }} xenial-security universe
+deb-src {{ deb_url }} xenial-security universe
+deb {{ deb_url }} xenial-security multiverse
+deb-src {{ deb_url }} xenial-security multiverse
 
 ## Uncomment the following two lines to add software from Canonical's
 ## 'partner' repository.
 ## This software is not part of Ubuntu, but is offered by Canonical and the
 ## respective vendors as a service to Ubuntu users.
-# deb http://archive.canonical.com/ubuntu trusty partner
-# deb-src http://archive.canonical.com/ubuntu trusty partner
-
-## Uncomment the following two lines to add software from Ubuntu's
-## 'extras' repository.
-## This software is not part of Ubuntu, but is offered by third-party
-## developers who want to ship their latest software.
-# deb http://extras.ubuntu.com/ubuntu trusty main
-# deb-src http://extras.ubuntu.com/ubuntu trusty main
-
+# deb http://archive.canonical.com/ubuntu xenial partner
+# deb-src http://archive.canonical.com/ubuntu xenial partner
